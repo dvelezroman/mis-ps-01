@@ -4,6 +4,8 @@
 
 package com.ivisystems.sistemainventario;
 
+import javax.swing.SwingUtilities;
+import java.sql.Connection;
 /**
  *
  * @author dvelezroman
@@ -11,6 +13,19 @@ package com.ivisystems.sistemainventario;
 public class SistemaInventario {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        // Utilizar SwingUtilities para asegurar que la GUI se ejecute en el hilo de despacho de eventos
+        // Connection conexion = ConexionBD.getConnection();
+        // if (conexion != null) {
+            // System.out.println("Conexión exitosa a la base de datos.");
+        // }
+        // ConexionBD.closeConnection();
+        
+        SwingUtilities.invokeLater(new Runnable() {
+            public void run() {
+                // Crear y mostrar el formulario de inventario
+                InventarioForm inventarioForm = new InventarioForm();
+                inventarioForm.setVisible(true);
+            }
+        });
     }
 }

@@ -4,6 +4,7 @@
  */
 package com.ivisystems.sistemainventario;
 
+import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
 /**
@@ -16,7 +17,11 @@ public class InventarioForm extends javax.swing.JFrame {
      * Creates new form InventarioForm
      */
     public InventarioForm() {
-        initComponents();
+        initComponents(); // Inicializar los componentes de la interfaz gráfica
+        setTitle("Sistema de Inventario"); // Título del formulario
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // Cerrar la aplicación al cerrar la ventana
+        setSize(400, 300); // Tamaño del formulario
+        setLocationRelativeTo(null); // Centrar el formulario en la pantalla
     }
 
     /**
@@ -132,9 +137,8 @@ public class InventarioForm extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jScrollPane1)
                             .addComponent(txtNombre)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addComponent(txtPrecio, javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(txtStock, javax.swing.GroupLayout.Alignment.LEADING)))))
+                            .addComponent(txtStock)
+                            .addComponent(txtPrecio))))
                 .addContainerGap(23, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(

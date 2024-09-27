@@ -13,9 +13,9 @@ import java.sql.SQLException;
  * @author dvelezroman
  */
 public class ConexionBD {
-    private static final String URL = "jdbc:postgresql://<127.0.0.1>:<5432>/<inventory>";
-    private static final String USER = "<postgres>";
-    private static final String PASSWORD = "<password>";
+    private static final String URL = "jdbc:postgresql://127.0.0.1:5432/inventory";
+    private static final String USER = "postgres";
+    private static final String PASSWORD = "password";
     private static Connection connection = null;
 
     // Método para obtener la conexión
